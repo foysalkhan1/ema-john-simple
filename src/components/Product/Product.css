@@ -1,0 +1,18 @@
+.product {
+    display: flex;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+}
+.product-name h4 {
+    color: blue;
+    font-weight: 400;
+}
+.main-btn {
+    background-color: goldenrod;
+    height: 30px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
