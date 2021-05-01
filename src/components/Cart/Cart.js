@@ -20,7 +20,7 @@ const Cart = (props) => {
         return Number(precesion)
     }
     return (
-        <div>
+        <div className="cart-items">
             <h4>Order Summary</h4>
             <p>Items Ordered: {cart.length}</p>
             <p>Product Price: $ {formatNumber(total)}</p>
