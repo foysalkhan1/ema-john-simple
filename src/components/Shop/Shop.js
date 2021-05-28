@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
 import './Shop.css';
+import { Link } from 'react-router-dom';
 const Shop = () => {
     const firstTen = fakeData.slice(0, 10);
     const [products, setProducts] = useState(firstTen);
@@ -20,7 +21,6 @@ const Shop = () => {
         })
         setCart(previousCart);
     }, [])
-    
     const handleAddCart = (product) => {
         const productToBeAdded = product.key;
         // const newCart = [...cart, product];
@@ -49,8 +49,13 @@ const Shop = () => {
                     }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>  
-            </div>        
+                <Cart cart={cart}>
+                <Link to="/review">
+                    <button className="main-btn">Review Order</button>
+                </Link>
+                </Cart>  
+            </div> 
+                   
         </div>
     );
 };
